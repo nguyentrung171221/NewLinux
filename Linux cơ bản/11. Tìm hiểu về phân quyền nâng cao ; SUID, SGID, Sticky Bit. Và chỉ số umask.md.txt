@@ -1,0 +1,20 @@
+Phân quyền nâng cao (Advanced Permissions) và chỉ số umask là những khái niệm quan trọng liên quan đến quản lý quyền truy cập vào tệp tin và thư mục trong hệ điều hành Linux. Dưới đây là thông tin chi tiết về từng khái niệm:
+
+SUID (Set User ID) và SGID (Set Group ID):
+
+SUID (Set User ID): Khi một tệp tin có quyền SUID được thực thi, nó chạy với quyền của người sở hữu tệp thay vì quyền của người dùng thực hiện nó. Điều này thường áp dụng cho các tệp tin thực hiện một số thao tác mà cần quyền đặc biệt (ví dụ: passwd, để người dùng thay đổi mật khẩu của họ).
+
+SGID (Set Group ID): Khi một thư mục có quyền SGID được sử dụng để tạo tệp mới bên trong nó, tệp mới được tạo với nhóm của thư mục cha, thay vì nhóm của người tạo tệp. Điều này hữu ích khi cần chia sẻ tệp trong một dự án cụ thể và đảm bảo rằng tất cả thành viên trong dự án thuộc cùng một nhóm.
+
+Sticky Bit:
+
+Sticky bit là một quyền đặc biệt được áp dụng cho thư mục. Khi một thư mục có quyền sticky bit, chỉ người dùng sở hữu thư mục và chủ sở hữu của tệp tin được tạo trong thư mục đó có quyền xóa hoặc di chuyển tệp tin đó. Điều này thường được sử dụng trên thư mục /tmp để ngăn người dùng xóa tệp tin của người khác trong thư mục này.
+Chỉ Số Umask (umask):
+
+Chỉ số umask là một giá trị số được sử dụng để điều chỉnh quyền truy cập mặc định của các tệp tin và thư mục mới được tạo. Nó hoạt động bằng cách loại bỏ các quyền từ quyền truy cập mặc định của hệ thống.
+
+Giá trị umask được áp dụng cho quyền truy cập của người dùng thường (regular users) khi họ tạo tệp tin hoặc thư mục mới. Giá trị umask thường được thiết lập trong tệp cấu hình shell (ví dụ: ~/.bashrc hoặc /etc/profile).
+
+Ví dụ, nếu giá trị umask là 022, thì các tệp tin mới sẽ có quyền -rw-r--r-- (644), và các thư mục mới sẽ có quyền drwxr-xr-x (755) mặc định.
+
+Phân quyền nâng cao (SUID, SGID, Sticky Bit) và chỉ số umask là các công cụ quan trọng để kiểm soát quyền truy cập và an toàn hệ thống trong môi trường Linux. Chúng giúp bạn cải thiện bảo mật và quản lý quyền truy cập vào các tệp tin và thư mục.
