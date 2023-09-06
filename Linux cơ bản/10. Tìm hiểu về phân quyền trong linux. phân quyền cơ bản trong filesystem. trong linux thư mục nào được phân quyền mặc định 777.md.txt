@@ -1,0 +1,21 @@
+Trong hệ điều hành Linux, phân quyền là cách quản lý quyền truy cập vào tệp tin và thư mục. Phân quyền cơ bản trong hệ thống tệp tin Linux dựa trên ba khía cạnh chính: người dùng (owner), nhóm người dùng (group), và người dùng khác (others). Mỗi một tệp tin hoặc thư mục có ba quyền chính:
+
+Quyền Đọc (Read - r):
+
+Cho phép xem nội dung của tệp tin hoặc danh sách các tệp tin trong thư mục.
+Quyền Ghi (Write - w):
+
+Cho phép sửa đổi hoặc ghi nội dung của tệp tin hoặc tạo, xóa tệp tin trong thư mục.
+Quyền Thực Thi (Execute - x):
+
+Cho phép thực thi tệp tin như một chương trình hoặc di chuyển vào thư mục (đối với thư mục).
+Các quyền này được áp dụng cho người dùng, nhóm người dùng và người dùng khác một cách độc lập, do đó tạo ra một tổ hợp quyền truy cập. Có nhiều cách để hiển thị quyền truy cập, thường là dưới dạng các ký hiệu (r, w, x) hoặc dưới dạng số (0-7).
+
+Ví dụ, quyền rwxr-xr-- có nghĩa rằng:
+
+Người dùng (owner) có quyền đọc, ghi và thực thi tệp tin.
+Nhóm người dùng (group) có quyền đọc và thực thi tệp tin.
+Người dùng khác (others) chỉ có quyền đọc tệp tin.
+Mặc định, không có thư mục nào trong hệ điều hành Linux được phân quyền mặc định là 777 (rwxrwxrwx) bởi vì quyền truy cập này cho phép mọi người truy cập, sửa đổi và thực thi tệp tin và thư mục. Một thư mục với quyền 777 có thể làm cho hệ thống của bạn trở nên không an toàn nếu không được quản lý cẩn thận, vì bất kỳ người dùng nào cũng có thể tạo, thay đổi hoặc xóa các tệp tin bên trong thư mục này.
+
+Thay vào đó, mặc định, các thư mục thường được phân quyền là 755 (rwxr-xr-x) và các tệp tin thường là 644 (rw-r--r--), điều này có nghĩa là người dùng có quyền đọc và ghi tệp tin và các người dùng khác chỉ có quyền đọc. Các quyền cụ thể có thể khác nhau tùy thuộc vào hệ điều hành Linux cụ thể và cấu hình của bạn.
