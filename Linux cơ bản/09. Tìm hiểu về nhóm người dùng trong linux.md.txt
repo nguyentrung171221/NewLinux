@@ -44,3 +44,27 @@ shell
 Trong đó new_primary_group là tên nhóm gốc mới và username là tên người dùng.
 
 Nhóm người dùng trong Linux là một phần quan trọng của việc quản lý quyền truy cập và tổ chức người dùng trên hệ thống. Bằng cách sử dụng nhóm, bạn có thể dễ dàng quản lý quyền truy cập cho nhiều người dùng cùng một lúc và giảm thiểu sự phức tạp trong việc quản lý tệp tin và thư mục.
+
+
+ ## Trong hệ điều hành Linux, có ba loại người dùng chính, mỗi loại có quyền và mục tiêu sử dụng khác nhau. Dưới đây là mô tả về các loại người dùng này:
+
+Người Dùng Hệ Thống (System Users):
+
+Người dùng hệ thống là những người dùng được tạo ra bởi hệ thống để thực hiện các dịch vụ, tiến trình và chức năng nội bộ của hệ thống.
+Thường không được sử dụng cho mục đích tương tác của người dùng cuối.
+Thường có UID (User ID) nhỏ hơn 1000 và không có mật khẩu, nghĩa là không thể đăng nhập trực tiếp.
+Có quyền truy cập vào các tệp tin và thư mục cụ thể mà người dùng hệ thống cần để hoạt động, nhưng không thể truy cập vào tất cả các tệp tin.
+Người Dùng Root (Superuser):
+
+Người dùng root (UID 0) là người dùng có toàn quyền trên hệ thống và được gọi là "superuser" hoặc "administrator".
+Root có quyền truy cập và thực hiện mọi thao tác trên hệ thống, bao gồm cả việc tạo, xóa, và sửa đổi tất cả các tệp tin và thư mục, cài đặt phần mềm, và quản lý tài khoản người dùng.
+Vì quyền hạn lớn, việc sử dụng tài khoản root cần được thực hiện cẩn thận và chỉ khi cần thiết, để tránh các lỗi không mong muốn.
+Người Dùng Thường (Regular Users):
+
+Người dùng thường là người dùng cuối cùng của hệ thống, thường được tạo ra để sử dụng hệ thống cho mục đích thông thường.
+Họ có UID lớn hơn 1000 và thường có mật khẩu cho phép đăng nhập vào hệ thống.
+Quyền truy cập của người dùng thường bị hạn chế so với tài khoản root. Họ chỉ có thể thực hiện thay đổi trên các tệp tin và thư mục mà họ có quyền truy cập.
+Người dùng thường có quyền sử dụng các ứng dụng và tiến trình thông thường trên hệ thống.
+Trong Linux, việc quản lý quyền truy cập dựa vào hệ thống phân quyền (file permissions) và quản lý nhóm người dùng (user groups). Người dùng thường có thể tham gia vào một hoặc nhiều nhóm người dùng, từ đó họ có thể chia sẻ quyền truy cập vào tệp tin và thư mục cụ thể với các người dùng khác trong cùng một nhóm.
+
+Lưu ý rằng một số hệ thống còn có thể có các loại người dùng bổ sung như người dùng "service", "guest", hoặc "nobody", tùy thuộc vào cấu hình cụ thể của hệ thống.
