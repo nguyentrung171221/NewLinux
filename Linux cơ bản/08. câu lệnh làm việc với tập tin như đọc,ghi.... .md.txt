@@ -1,1 +1,34 @@
+Đọc nội dung tập tin:
 
+cat file.txt: Hiển thị nội dung của tệp tin file.txt trên màn hình.
+more file.txt: Hiển thị nội dung của tệp tin file.txt một trang một.
+less file.txt: Hiển thị nội dung của tệp tin file.txt trang một cách tương tác.
+Ghi nội dung vào tập tin:
+
+echo "Hello, World!" > file.txt: Ghi chuỗi "Hello, World!" vào tệp tin file.txt. Lưu ý rằng điều này sẽ ghi đè lên nội dung hiện có của tệp.
+echo "New content" >> file.txt: Thêm chuỗi "New content" vào cuối tệp tin file.txt mà không ghi đè lên nội dung hiện có.
+Nối tập tin:
+
+cat file1.txt file2.txt > combined.txt: Nối nội dung của file1.txt và file2.txt thành một tệp mới có tên combined.txt.
+Sao chép tập tin:
+
+cp source.txt destination.txt: Sao chép tệp tin source.txt thành destination.txt.
+cp -r source_directory/ destination_directory/: Sao chép toàn bộ thư mục source_directory vào destination_directory đối với các thư mục.
+Di chuyển hoặc đổi tên tập tin:
+
+mv oldfile.txt newfile.txt: Di chuyển hoặc đổi tên tệp tin từ oldfile.txt thành newfile.txt.
+mv file.txt /path/to/destination/: Di chuyển tệp tin file.txt đến thư mục /path/to/destination/.
+Xóa tập tin:
+
+rm file.txt: Xóa tệp tin file.txt. Hãy cẩn thận khi sử dụng lệnh này, vì nó không đưa tệp vào thùng rác mà xóa ngay lập tức.
+Liệt kê tập tin và thư mục:
+
+ls: Liệt kê tất cả các tệp tin và thư mục trong thư mục hiện tại.
+ls -l: Hiển thị danh sách tệp tin và thư mục dưới dạng danh sách chi tiết với thông tin về quyền truy cập, chủ sở hữu, kích thước và thời gian sửa đổi.
+ls -a: Liệt kê tất cả các tệp tin và thư mục, bao gồm cả các tệp tin ẩn (bắt đầu bằng dấu chấm).
+Tạo thư mục mới:
+
+mkdir directory_name: Tạo một thư mục mới với tên directory_name.
+Xem thông tin tập tin:
+
+stat file.txt: Hiển thị thông tin chi tiết về tệp tin file.txt, bao gồm thông tin về kích thước, quyền truy cập, thời gian tạo và sửa đổi.
