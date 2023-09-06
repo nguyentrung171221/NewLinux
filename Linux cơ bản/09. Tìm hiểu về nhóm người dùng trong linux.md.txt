@@ -1,1 +1,46 @@
+## Khái niệm về Nhóm Người Dùng:
 
+Mỗi người dùng Linux thường thuộc vào một hoặc nhiều nhóm người dùng.
+Nhóm người dùng được sử dụng để quản lý quyền truy cập chung cho một nhóm người dùng cụ thể đối với các tệp tin và thư mục.
+Tạo Nhóm Người Dùng:
+
+Để tạo một nhóm người dùng mới, bạn có thể sử dụng lệnh groupadd. Ví dụ:
+
+shell
+code
+"sudo groupadd mygroup"
+Thêm Người Dùng Vào Nhóm:
+
+Để thêm một người dùng vào một nhóm, bạn sử dụng lệnh usermod. Ví dụ:
+
+shell
+code
+"sudo usermod -a -G mygroup username"
+Trong đó mygroup là tên nhóm và username là tên người dùng.
+
+##Liệt Kê Nhóm Người Dùng:
+
+Để liệt kê tất cả nhóm người dùng có sẵn trên hệ thống, bạn có thể sử dụng lệnh cat hoặc getent. Ví dụ:
+
+shell
+ code
+"cat /etc/group"
+##Xác Định Nhóm Người Dùng Mặc Định:
+
+Mỗi người dùng mới được tạo trên hệ thống thường có một nhóm người dùng mặc định có cùng tên với tên người dùng. Ví dụ, người dùng john thường thuộc vào nhóm john mặc định.
+##Phân Quyền Với Nhóm Người Dùng:
+
+Có thể sử dụng nhóm người dùng để quản lý quyền truy cập vào tệp tin và thư mục. Bằng cách đặt quyền truy cập cho nhóm thay vì cho từng người dùng riêng lẻ, bạn có thể dễ dàng kiểm soát quyền truy cập cho một nhóm người dùng cụ thể.
+Nhóm Gốc (Primary Group) và Nhóm Phụ (Supplementary Group):
+
+Mỗi người dùng Linux có một nhóm gốc (primary group) mặc định mà tên của nó trùng với tên người dùng. Người dùng cũng có thể thuộc vào nhiều nhóm phụ (supplementary groups).
+Thay Đổi Nhóm Gốc:
+
+Để thay đổi nhóm gốc của một người dùng, bạn có thể sử dụng lệnh usermod. Ví dụ:
+
+shell
+ code
+"sudo usermod -g new_primary_group username"
+Trong đó new_primary_group là tên nhóm gốc mới và username là tên người dùng.
+
+Nhóm người dùng trong Linux là một phần quan trọng của việc quản lý quyền truy cập và tổ chức người dùng trên hệ thống. Bằng cách sử dụng nhóm, bạn có thể dễ dàng quản lý quyền truy cập cho nhiều người dùng cùng một lúc và giảm thiểu sự phức tạp trong việc quản lý tệp tin và thư mục.
