@@ -1,1 +1,24 @@
+Lệnh man là một trong những lệnh quan trọng trên hệ điều hành Unix và Unix-like (bao gồm Linux) được sử dụng để truy cập các trang hướng dẫn (manual pages) của các lệnh, chương trình hoặc tệp tin. Trang hướng dẫn giúp bạn hiểu cách sử dụng các lệnh và các chương trình cụ thể trên hệ thống của bạn. Dưới đây là cách sử dụng lệnh man:
 
+Để xem trang hướng dẫn cho một lệnh cụ thể, bạn chỉ cần gõ man sau đó là tên lệnh. Ví dụ:
+
+shell
+"man ls"
+
+Lệnh trên sẽ hiển thị trang hướng dẫn cho lệnh ls, hiển thị thông tin về cách sử dụng và các tùy chọn của nó.
+
+Để di chuyển trong trang hướng dẫn, bạn có thể sử dụng các phím mũi tên lên/xuống hoặc các phím "Page Up" và "Page Down". Để thoát khỏi trang hướng dẫn, bạn có thể nhấn phím q.
+
+Nếu bạn không biết chính xác tên lệnh mà bạn muốn tìm kiếm, bạn có thể sử dụng lệnh man -k hoặc man --apropos kèm theo một từ khóa. Ví dụ:
+
+shell
+"man -k keyword"
+Lệnh trên sẽ hiển thị danh sách các lệnh hoặc chương trình có liên quan đến từ khóa bạn cung cấp.
+
+Một số trang hướng dẫn có nhiều phần, bạn có thể chọn xem một phần cụ thể bằng cách thêm số phần sau tên lệnh. Ví dụ:
+
+shell
+"man 5 passwd"
+Lệnh trên sẽ hiển thị trang hướng dẫn cho lệnh passwd trong phần thứ 5, thường là mô tả về tệp tin cấu hình hoặc định dạng tệp tin.
+
+man là một công cụ mạnh mẽ để tìm hiểu về các lệnh và chương trình trên hệ thống của bạn, và nó là một phần quan trọng trong quá trình làm việc với hệ điều hành Unix và Linux.
